@@ -125,6 +125,7 @@ static inline bool check_recursive_alloc(struct stack_trace *trace,
 static noinline depot_stack_handle_t save_stack(gfp_t flags)
 {
 	unsigned long entries[PAGE_OWNER_STACK_DEPTH];
+
 	struct stack_trace trace = {
 		.nr_entries = 0,
 		.entries = entries,
